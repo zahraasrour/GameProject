@@ -30,7 +30,7 @@ namespace GameProject.Services
             Game game = _context.Games.FirstOrDefault(x=>x.IdGame == Id);
             if (game == null)
             {
-                game = new Game() { IdGame = -1, FullName = "not found"};
+                game = new Game() { IdGame = -2, FullName = "not found"};
             }
             return game;
 
