@@ -1,0 +1,35 @@
+﻿@page
+@model GameProject.Pages.IndexPageModel
+@{
+}
+<h1 class="display-4">Welcome To our Game !</h1>
+<form method="post" asp-page-handler="Info">
+    <div class="form-group">
+        <label asp-for="viewModel.FullName"></label>
+        <input asp-for="viewModel.FullName" name="FullName" />
+        <br />
+        <span asp-validation-for="viewModel.FullName" data-valmsg-for="FullName"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="viewModel.Number1"></label>
+        <input asp-for="viewModel.Number1" name="Number1" />
+        <br />
+        <span asp-validation-for="viewModel.Number1" data-valmsg-for="Number1"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="viewModel.Number2"></label>
+        <input asp-for="viewModel.Number2" name="Number2" />
+        <br />
+        <span asp-validation-for="viewModel.Number2" data-valmsg-for="Number2"></span>
+    </div>
+
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+</form>
+<div asp-validation-summary="All" class="danger"></div>
+
+@section Scripts {
+    @Html.Partial("_ValidationScriptsPartial")
+}

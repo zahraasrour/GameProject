@@ -1,0 +1,26 @@
+﻿@page
+@model GameProject.Pages.ListModel
+@{
+}
+<table border="1">
+    
+    <thead>
+        <tr>
+            <th>FullName</th>
+            <th>Number1</th>
+            <th>Number2</th>
+            <th>WonAmount</th>
+            
+        </tr>
+    </thead>
+    @foreach (var game in Model.Games)
+    {
+        <tr>
+            <td>@game.FullName</td>
+            <td>@game.Number1</td>
+            <td>@game.Number2</td>
+            <td>@game.WonAmount</td>
+        </tr>
+        <br />
+    }
+</table>
